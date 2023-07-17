@@ -1,0 +1,535 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$link-decoration: none;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+
+// 4. Include any default map overrides here
+$custom-colors: (
+	"farve": $cyan-400,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "bootstrapComponents";
+
+// 5. Du kan lave styling her...
+
+body {
+	font-family: 'Raleway', 'sans-serif';
+	background-color: #fff;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	font-size: 14px;
+	color: #7a7a7a;
+	line-height: 24px;
+	left: 1px;
+}
+
+section {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+
+.section-heading {
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+
+.blue-button a {
+	display: inline-block;
+	background-color: #4883ff;
+	color: white;
+	font-size: 15px;
+	font-weight: 500;
+	padding: 10px 16px;
+	text-decoration: none;
+	border: 2px solid #4883ff;
+	transition: all 0.5s;
+}
+
+.blue-button a:hover {
+	background-color: transparent;
+	color: #7a7a7a ;
+}
+
+
+/* Header Style */
+
+#header {
+	overflow: visible;
+	position: relative;
+	background-color: #fff;
+}
+
+
+#primary-nav-button {
+	background: transparent;
+	display: none;
+	position: absolute;
+	border: none;
+	bottom: 0;
+	right: 15px;
+	top: 0;
+	padding: 0;
+	outline: none;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	font-size: 0;
+}
+
+#header .logo {
+	float: left;
+}
+
+#header .logo img {
+	width: 100%;
+	overflow: hidden;
+}
+
+.menu {
+	float: right;
+}
+
+.menu li {
+	float: left;
+	margin-left: 30px;
+	position: relative;
+	line-height: 100px;
+}
+
+.menu li:last-child {
+	margin-right: 0;
+}
+
+
+#primary-nav li a {
+	color: #121212;
+	line-height: 100px;
+	padding: 0 15px;
+	font-size: 15px;
+	font-weight: 400;
+	transition: all 0.5s;
+}
+
+.menu .sub-menu {
+	display: none;
+	position: absolute;
+	left: 0;
+	max-height: 1000px;
+}
+
+/* Banner Style */
+
+
+.banner {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	position: relative;
+}
+
+.thumb-img {
+	position: relative;
+}
+
+
+.thumb-img:before {
+	z-index: 3;
+	background-color: rgba(0,0,0,.3);
+}
+
+.featured-item .thumb-img:before {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.banner .container {
+	position: relative;
+	z-index: 2;
+}
+
+
+.banner .banner-caption {
+	padding: 200px 0;
+}
+
+
+
+.banner .banner-caption h2 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 42px;
+	letter-spacing: 0.5px;
+	color: #fff;
+}
+
+.banner .banner-caption h4 {
+	color: #fff;
+}
+
+.banner {
+	font-size: 22px;
+	color: #fff;
+	letter-spacing: 0.5px;
+}
+
+.banner .banner-caption .blue-button {
+	margin-top: 30px;
+}
+
+.banner {
+	border-bottom: 5px solid white;
+	background-color: #fff;
+	padding: 15px;
+}
+
+
+
+
+.featured-item { margin-bottom: 30px; }
+
+
+.featured-places .featured-item .thumb {
+	position: relative;
+	z-index: 1;
+}
+
+.featured-places .featured-item .thumb img {
+	width: 100%;
+	overflow: hidden;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.featured-places .featured-item .thumb .overlay-content {
+	position: absolute;
+	z-index: 9;
+	top: 30px;
+	left: 30px;
+	color: #fff;
+}
+
+.featured-places .featured-item .thumb .overlay-content li {
+	display: inline;
+	margin-right: 3px;
+}
+
+.featured-places .featured-item .thumb .date-content {
+	position: absolute;
+	z-index: 9;
+	top: 30px;
+	right: 30px;
+	color: #fff;
+	text-align: center;
+	width: 90px;
+	height: 90px;
+	display: inline-block;
+	vertical-align: middle;
+	background-color: red;
+	border-radius: 50%;
+}
+
+.featured-places .featured-item .thumb {
+	font-size: 24px;
+	font-weight: 700;
+	margin-top: 18px;
+	margin-bottom: 5px;
+	letter-spacing: 0.5px;
+}
+
+.featured-places .featured-item .thumb {
+	font-size: 12px;
+	font-weight: 300;
+	text-transform: uppercase;
+	display: block;
+	letter-spacing: 0.5px;
+}
+
+.featured-places .featured-item .down-content {
+	background-color: #fff;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	padding: 20px 20px 0;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.featured-places .featured-item .down-content h4 {
+	margin-top: 0;
+	font-size: 20px;
+	font-weight: 600;
+	color: black;
+	margin-bottom: 5px;
+}
+
+.featured-places .featured-item .down-content span {
+	display: block;
+	font-size: 14px;
+	color: black;
+	margin-bottom: 15px;
+}
+
+.featured-places .featured-item .down-content span strong {
+	font-size: 22px;
+}
+
+.featured-places .featured-item .down-content p {
+	margin-bottom: 20px;
+}
+
+.featured-places .featured-item .down-content .col-md-6 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.featured-places .featured-item .down-content .text-button {
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	border-top: 1px solid #ddd;
+	margin: 0px -20px;
+}
+
+.featured-places .featured-item .down-content .first-button {
+	border-right: 1px solid #ddd;
+}
+
+.featured-places .featured-item .down-content .text-button a {
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #7a7a7a;
+	letter-spacing: 0.5px;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	transition: all 0.5s;
+}
+
+.featured-places .featured-item .down-content .text-button a:hover {
+	color: #4883ff;
+}
+
+
+
+
+section.our-services .service-item {
+	text-align: center;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	padding: 50px 30px;
+}
+
+section.our-services .service-item .icon img {
+	max-width: 100%;
+}
+
+section.our-services .service-item h4 {
+	font-size: 19px;
+	font-weight: 600;
+	color: #232323;
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+
+.our-services .left-content h4 {
+	font-size:  19px;
+	font-weight:  600;
+	color:  #232323;
+	margin-top: 0;
+	margin-bottom:  25px;
+}
+
+.our-services .left-content .blue-button {
+	margin-top: 25px;
+}
+
+
+section .table-item {
+	text-align: center;
+	background-color: #eeeeee;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding: 0 0 40px 0;
+}
+
+section .table-item {
+	background-color: #4883ff;
+	padding: 30px;
+	color: #fff;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+section .table-item {
+	font-size: 19px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	margin: 0;
+}
+
+section .table-item {
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+
+
+.wrapper {
+	text-align: center;
+}
+
+
+
+footer {
+	padding: 80px 0 70px 0;
+	border-top: 1px solid #ddd;
+}
+
+footer .footer-heading h4 {
+	font-size: 21px;
+	color: #232323;
+	letter-spacing: 0.5px;
+	margin-top: 15px;
+	margin-bottom: 40px;
+}
+
+
+footer .about-veno .logo {
+	margin-bottom: 40px;
+}
+
+footer .about-veno ul li a {
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	text-align: center;
+	line-height: 32px;
+	background-color: #cdcdcd;
+	border-radius: 50%;
+	font-size: 15px;
+	color: #fff;
+	margin-right: 3px;
+	transition: all 0.5s;
+}
+
+footer .about-veno p {
+	margin-bottom: 25px;
+}
+
+footer .about-veno ul li a:hover {
+	background-color: #4883ff;
+}
+
+footer .useful-links ul li {
+	margin-bottom: 12px;
+}
+
+footer .useful-links ul li a {
+	font-size: 15px;
+	color: #7a7a7a;
+	letter-spacing: 0.5px;
+	text-decoration: none;
+	transition: all 0.5s;
+}
+
+footer .useful-links ul li a:hover {
+	color: #4883ff;
+}
+
+footer .useful-links ul li i {
+	color: #4883ff;
+	font-size: 6px;
+	position: relative;
+	top: -3px;
+	margin-right: 8px;
+}
+
+footer .contact-info p {
+	margin-bottom: 25px;
+}
+
+footer .contact-info ul li {
+	margin: 10px 0;
+}
+
+footer .contact-info ul li span {
+	font-size: 13px;
+	color: #232323;
+	font-weight: 600;
+	letter-spacing: 0.3px;
+	width: 80px;
+	display: inline-block;
+}
+
+footer .contact-info ul li a {
+	font-size: 13px;
+	color: #4883ff;
+	letter-spacing: 0.5px;
+	text-decoration: none;
+}
+
+.sub-footer p {
+	text-align: center;
+	display: inline-block;
+	background-color: #f4f4f4;
+	width: 100%;
+	margin-bottom: 0;
+	padding: 30px 0;
+	font-size: 15px;
+	color: #aaaaaa;
+}
+
+.sub-footer a {
+	text-decoration: none;
+	color: #4883ff;
+}
+
+
+@media (max-width:992px) {
+
+	.featured-places .featured-item {
+		margin-bottom: 30px;
+	}
+
+	.featured-places .featured-item .down-content {
+		border-right: none;
+	}
+
+	section.our-services {
+		margin-bottom: 30px;
+	}
+
+
+	footer .useful-links {
+		margin-top: 60px;
+	}
+
+	footer .contact-info {
+		margin-top: 60px;
+	}
+
+}
+
+main > section {
+	background: #fff;
+}
+
+main > section:nth-child(even) {
+	background: #f8f8f8;
+}

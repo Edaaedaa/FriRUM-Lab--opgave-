@@ -1,0 +1,16 @@
+{
+  "name": "kickstarter-master-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch --update --style=compressed css:css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "install": "^0.13.0"
+  },
+  "devDependencies": {
+    "sass": "^1.58.0"
+  }
+}
